@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAudiobookList.DataAccess", "MyAudiobookList77\MyAudiobookList.DataAccess.csproj", "{FD08B3F3-14B0-4869-88F1-7EBFCDD9F7B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAudiobookList.Blazor", "MyAudiobookList.Blazor\MyAudiobookList.Blazor.csproj", "{49B9DA5E-441F-4E8B-8376-4D11D659EB71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD08B3F3-14B0-4869-88F1-7EBFCDD9F7B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD08B3F3-14B0-4869-88F1-7EBFCDD9F7B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD08B3F3-14B0-4869-88F1-7EBFCDD9F7B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD08B3F3-14B0-4869-88F1-7EBFCDD9F7B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B9DA5E-441F-4E8B-8376-4D11D659EB71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B9DA5E-441F-4E8B-8376-4D11D659EB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B9DA5E-441F-4E8B-8376-4D11D659EB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B9DA5E-441F-4E8B-8376-4D11D659EB71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
