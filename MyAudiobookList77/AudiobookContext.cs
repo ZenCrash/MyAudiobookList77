@@ -11,6 +11,11 @@ namespace MyAudiobookList.DataAccess
 
     private readonly string _connectionString;
 
+    public AudiobookContext()
+    {
+
+    }
+
     public AudiobookContext(IConfiguration configuration, DbContextOptions<AudiobookContext> options) : base(options)
     {
       _connectionString = configuration.GetConnectionString("MyAudiobookDB") ?? string.Empty;
