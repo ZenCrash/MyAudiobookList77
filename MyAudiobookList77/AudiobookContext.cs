@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MyAudiobookList.DataAccess.Models;
 
 namespace MyAudiobookList.DataAccess
@@ -8,14 +9,19 @@ namespace MyAudiobookList.DataAccess
 
     public DbSet<AudioBook> AudioBooks { get; set; }
 
-    public AudiobookContext(DbContextOptions<AudiobookContext> options) : base(options)
-    {
+    private readonly string _connectionString;
 
+    public AudiobookContext(IConfiguration configuration, DbContextOptions<AudiobookContext> options) : base(options)
+    {
+      _connectionString = configuration.GetConnectionString("MyAudiobookDB") ?? string.Empty;
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlite("Data Source=Database/MyAudiobookDb.db");
+      string baseDirectory = AppContext.BaseDirectory;
+      string projectDirectory = Directory.GetParent(baseDirectory)?.Parent?.Parent?.FullName;
+      string path = Path.Combine(projectDirectory, @"Database/MyAudiobookDb.db");
+      optionsBuilder.UseSqlite(path);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
